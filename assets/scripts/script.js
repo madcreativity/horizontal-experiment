@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollAreaMain_scrollElement.classList.remove("smooth");
         }
 
-        console.log(e);
-
         scrollAreaMain_scrollElement.scrollLeft -= e.wheel;
     });
 

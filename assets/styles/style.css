@@ -89,6 +89,8 @@ main {
 
 #asideNav #asideTitle {
     color: #6166e5;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
     font-size: 1.2rem;
     transition: color 0.25s;
 }
@@ -261,6 +263,57 @@ nav ul a:hover {
 }
 
 .siteButton:hover {
-    color: #3684f7;
     background-color: white;
+    color: #3684f7;
+}
+
+/* Dark Theme */
+#wrapper.dark {
+    color: white;
+    background: #202020;
+    background: linear-gradient(to bottom right, #936ced, #6c86ed);
+    background: -webkit-linear-gradient(top left, #936ced, #6c86ed);
+    background: -moz-linear-gradient(top left, #936ced, #6c86ed);
+}
+
+.dark #asideNav {
+    background-color: #303030;
+}
+
+.dark .priceCard {
+    background-color: #303030;
+    border-color: #936ced;
+}
+
+.dark .priceCard h2 {
+    color: white;
+}
+
+.dark #asideNav #asideTitle {
+    color: #936ced;
+}
+
+.dark nav ul a {
+    color: #936ced;
+    border-color: #936ced;
+}
+
+.dark nav ul a.scrolled {
+    background-color: #936ced;
+    color: white;
+}
+
+.dark nav ul a:hover {
+    background-color: #936ced;
+    color: white;
+}
+
+.dark .siteButton:hover {
+    color: #303030;
+}
+
+.dark .priceCard--feature::after {
+    background: linear-gradient(to top left, #936ced, #6c86ed);
+    background: -webkit-linear-gradient(bottom right, #936ced, #6c86ed);
+    background: -moz-linear-gradient(bottom right, #936ced, #6c86ed);
 }
