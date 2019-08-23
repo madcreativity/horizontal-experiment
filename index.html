@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+        <noscript>
+            <style>
+            [data-simplebar] {
+                overflow: auto;
+            }
+            </style>
+        </noscript>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand:300&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="./assets/images/member.png">
+        <link rel="stylesheet" href="./assets/styles/style.css">
+
+        <title>Horizontal Experiment</title>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <aside id="asideNav">
+                <nav>
+                    <p id="asideTitle">Experiment.</p>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
+    
+            <main>
+                <div id="scrollArea" data-simplebar data-simplebar-auto-hide="false">
+                    <div id="scrollSectionWrapper">
+                        <section class="scrollSection" id="home">
+                            <h1>Home</h1>
+                            <div class="center">
+                                <p id="siteTitle">Experiment.</p>
+                                <a class="siteButton" href="#projects">Get Started</a>
+                            </div>
+                        </section>
+        
+                        <section class="scrollSection" id="projects">
+                            <h1>Projects</h1>
+                            <p>No projects available.</p>
+                        </section>
+
+                        <section class="scrollSection" id="about">
+                            <h1>About</h1>
+                            <article class="priceCardWrapper">
+
+                                <section class="priceCard">
+                                    <h2>Member A</h2>
+                                    <img class="priceCard_icon" src="./assets/images/member.png" alt="Member A">
+                                    <p class="priceCard_description">Repellat, iure ea? Ad nam commodi quisquam provident mollitia delectus quidem unde totam consequuntur itaque, ullam iusto cumque sapiente eum, ea explicabo.</p>
+                                </section>
+        
+                                <section class="priceCard priceCard--feature">
+                                    <h2>Member B</h2>
+                                    <img class="priceCard_icon" src="./assets/images/member.png" alt="Member B">
+                                    <p class="priceCard_description">Repellat, iure ea? Ad nam commodi quisquam provident mollitia delectus quidem unde totam consequuntur itaque, ullam iusto cumque sapiente eum, ea explicabo.</p>
+                                </section>
+                                
+                                <section class="priceCard">
+                                    <h2>Member C</h2>
+                                    <img class="priceCard_icon" src="./assets/images/member.png" alt="Member C">
+                                    <p class="priceCard_description">Repellat, iure ea? Ad nam commodi quisquam provident mollitia delectus quidem unde totam consequuntur itaque, ullam iusto cumque sapiente eum, ea explicabo.</p>
+                                </section>
+                            </article>
+                        </section>
+
+                        <section class="scrollSection" id="contact">
+                            <h1>Contact</h1>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+        <script src="./assets/scripts/script.js"></script>
+        
+    </body>
+</html>
