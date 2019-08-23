@@ -69,6 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Mobile navigation menu
+    const DOMnavMobileBtn = document.querySelector("#navMenu");
+    const DOMnavAside = document.querySelector("#asideNav");
+
+    DOMnavMobileBtn.addEventListener("click", () => {
+        if(DOMnavAside.classList.contains("open")) {
+            DOMnavAside.classList.remove("open");
+        } else {
+            DOMnavAside.classList.add("open");
+        }
+    });
+
     // First execution to ensure that the correct nav link is highlighted
     calculateLinks();
 });

@@ -29,7 +29,7 @@ main {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    padding-left: 10vw;
+    padding-left: 140px;
 }
 
 /* Scroll Area */
@@ -45,7 +45,8 @@ main {
 }
 
 #scrollArea .scrollSection {
-    width: calc(100% - 120px);
+    width: auto;
+    min-width: calc(100% - 120px);
     height: calc(100vh - 60px);
     margin: 30px 60px;
     flex-shrink: 0;
@@ -73,7 +74,7 @@ main {
 
 /* Aside */
 #asideNav {
-    width: 10vw;
+    width: 140px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -84,7 +85,7 @@ main {
     box-shadow: 1px 0 8px 1px rgba(0, 0, 0, 0.25);
     position: fixed;
     z-index: 100;
-    transition: background-color 0.25s, box-shadow 0.25s;
+    transition: background-color 0.25s, box-shadow 0.25s, transform 0.5s;
 }
 
 #asideNav #asideTitle {
@@ -139,6 +140,20 @@ nav ul a:hover {
     color: white;
 }
 
+#navMenu {
+    position: absolute;
+    top: 0;
+    z-index: 200;
+    left: 0;
+    height: 50px;
+    border: 0;
+    background: none;
+    color: white;
+    padding: 5px;
+    outline: none !important;
+    display: none;
+}
+
 /* Price Cards */
 .priceCard {
     border: 1px solid #222222;
@@ -154,6 +169,8 @@ nav ul a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 20px 50px;
+    width: calc(100vw - 140px - 120px);
+    box-sizing: border-box;
 }
 
 .priceCard h2 {
@@ -254,7 +271,11 @@ nav ul a:hover {
     font-size: 1.15rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    padding: 10px 80px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    max-width: 256px;
     background-color: transparent;
     border-radius: 50px;
     text-decoration: none;
@@ -316,4 +337,40 @@ nav ul a:hover {
     background: linear-gradient(to top left, #936ced, #6c86ed);
     background: -webkit-linear-gradient(bottom right, #936ced, #6c86ed);
     background: -moz-linear-gradient(bottom right, #936ced, #6c86ed);
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    #siteTitle {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #siteTitle {
+        font-size: 8vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #asideNav {
+        transform: translateX(-100%);
+    }
+
+    #asideNav.open {
+        transform: translateX(0);
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    #navMenu {
+        display: block;
+    }
+
+    #navMenu img {
+        height: 100%;
+    }
 }
