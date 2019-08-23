@@ -97,7 +97,7 @@ main {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     max-height: 500px;
     height: 100%;

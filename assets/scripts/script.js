@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const isFirefox = typeof InstallTrigger !== 'undefined';
+
+
     const DOMscrollAreaMain = document.querySelector("#scrollArea");
     const DOMscrollAreaHorizontalBar = document.querySelector("#scrollArea .simplebar-scrollbar");
     const scrollAreaMain_scrollElement = DOMscrollAreaMain.SimpleBar.getScrollElement();
@@ -24,11 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Convert standard vertical scroll to horizontal scroll
     DOMscrollAreaMain.addEventListener("onwheel" in document ? "wheel" : "mousewheel", function(e) {
         e.preventDefault();
-        e.wheel = e.deltaY ? -e.deltaY : e.wheelDelta / 40;
+        if(!isFirefox) {
+            e.wheel = e.deltaY ? -e.deltaY : e.wheelDelta / 40;
+        } else {
+            e.wheel = -e.deltaY * 40;
+        }
 
         if(scrollAreaMain_scrollElement.classList.contains("smooth")) {
             scrollAreaMain_scrollElement.classList.remove("smooth");
         }
+
+        console.log(e);
 
         scrollAreaMain_scrollElement.scrollLeft -= e.wheel;
     });
